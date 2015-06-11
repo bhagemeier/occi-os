@@ -26,7 +26,8 @@ from nova import utils
 from nova.compute import task_states
 from nova.compute import vm_states
 from nova.compute import flavors
-from nova.openstack.common import log
+from oslo_log import log as logging
+from oslo_log import loggers
 
 from occi import exceptions
 from occi.extensions import infrastructure
@@ -36,7 +37,7 @@ from occi_os_api.extensions import os_addon
 from occi_os_api.utils import get_openstack_api, is_networkinterface
 
 
-LOG = log.getLogger(__name__)
+LOG = logging.getLogger(__name__)
 
 
 def create_vm(entity, context):

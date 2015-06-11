@@ -25,7 +25,8 @@ OCCI registry
 # pylint: disable=R0201,E1002,R0914,R0912,E1121
 
 import uuid
-from nova.openstack.common import log
+from oslo_log import log as logging
+from oslo_log import loggers
 
 from oslo.config import cfg
 from occi import registry as occi_registry
@@ -43,7 +44,7 @@ from occi_os_api.utils import is_compute, is_network, is_sec_rule, \
     is_sec_group, is_networkinterface, is_storage, get_item_id
 
 
-LOG = log.getLogger(__name__)
+LOG = logging.getLogger(__name__)
 
 CONF = cfg.CONF
 

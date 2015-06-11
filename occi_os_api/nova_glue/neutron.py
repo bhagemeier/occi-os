@@ -26,14 +26,15 @@ NotImplementedErrors when creating networks:
         neutronv2/api.py#L1018
 """
 
-from nova.openstack.common import log
+from oslo_log import log as logging
+from oslo_log import loggers
 
 from neutronclient.neutron import client
 
 from occi_os_api.utils import get_neutron_url
 
 
-LOG = log.getLogger(__name__)
+LOG = logging.getLogger(__name__)
 
 
 def get_neutron_connection(context):

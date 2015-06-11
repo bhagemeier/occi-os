@@ -24,7 +24,8 @@ OCCI WSGI app
 # pylint: disable=W0613,R0903
 
 from nova import wsgi
-from nova.openstack.common import log
+from oslo_log import log as logging
+from oslo_log import loggers
 from urllib import quote
 
 from oslo.config import cfg
@@ -45,7 +46,7 @@ from occi_os_api.nova_glue import vm
 from occi_os_api.nova_glue import security
 from occi_os_api.utils import sanitize, get_image_name
 
-LOG = log.getLogger(__name__)
+LOG = logging.getLogger(__name__)
 
 # Setup options
 OCCI_OPTS = [
