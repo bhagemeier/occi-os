@@ -27,7 +27,7 @@ from nova import utils
 from nova.compute import task_states
 from nova.compute import vm_states
 from nova.compute import flavors
-from nova.openstack.common import log
+from oslo_log import log
 
 from occi import exceptions
 from occi.extensions import infrastructure

@@ -24,7 +24,9 @@ OCCI registry
 # E1121:# positional args.
 # pylint: disable=R0201,E1002,R0914,R0912,E1121
 
-from oslo.config import cfg
+
+from oslo_config import cfg
+from oslo_log import log
 
 from occi_os_api.backends import openstack
 from occi_os_api.extensions import os_addon
@@ -40,7 +42,6 @@ from occi import exceptions
 
 CONF = cfg.CONF
 
-from nova.openstack.common import log
 LOG = log.getLogger(__name__)
 
 
