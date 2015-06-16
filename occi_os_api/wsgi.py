@@ -23,10 +23,10 @@ OCCI WSGI app :-)
 # W0613:unused args,R0903:too few pub methods
 # pylint: disable=W0613,R0903
 
-from oslo.config import cfg
+from oslo_config import cfg
 
 from nova import wsgi
-from nova.openstack.common import log
+from oslo_log import log
 
 from occi_os_api import registry
 from occi_os_api.backends import compute
